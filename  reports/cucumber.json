@@ -1,0 +1,110 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "orangehrm-login;login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Login with valid credentials",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 507522500
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 2837556799
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open the OrangeHRM application",
+            "match": {
+              "location": "step-definitions\\loginstep.js:10"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 453540100
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I enter username \"Admin\"",
+            "match": {
+              "location": "step-definitions\\loginstep.js:17"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 17276100
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I enter password \"admin123\"",
+            "match": {
+              "location": "step-definitions\\loginstep.js:22"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 74476399
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click the login button",
+            "match": {
+              "location": "step-definitions\\loginstep.js:26"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 1466868200
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should see the OrangeHRM dashboard",
+            "match": {
+              "location": "step-definitions\\loginstep.js:32"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 21334999
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "orangehrm-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "OrangeHRM Login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]

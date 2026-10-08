@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+
+# Cucumber reports
+reports/
+cucumber-report/
+allure-results/
+allure-report/
+
+# Screenshots / videos / traces
+screenshots/
+videos/
+traces/
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage
+coverage/
+
+# Windows
+*.lnk

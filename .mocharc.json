@@ -1,0 +1,5 @@
+{
+  "spec": "tests/**/*.mocha.js",
+  "timeout": 60000,
+  "reporter": "spec"
+}
