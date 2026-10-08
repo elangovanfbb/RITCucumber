@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cucumber-js",
-    "test-smoke": "set ENV=qa && set BROWSER=chromium && npx cucumber-js --tags \"@smoke\"",
-    "test-smoke-pretty" : "set ENV=qa && set BROWSER=chromium && npx cucumber-js --tags \"@smoke\" --format pretty"
+     "test": "cucumber-js",
+    "test:smoke": "cross-env ENV=qa BROWSER=chromium cucumber-js --tags \"@smoke\"",
+    "test:regression": "cross-env ENV=qa BROWSER=chromium cucumber-js --tags \"@regression\"",
+    "test:smoke:pretty": "cross-env ENV=qa BROWSER=chromium cucumber-js --tags \"@smoke\" --format pretty"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "allure-commandline": "^2.46.1",
     "allure-cucumberjs": "^3.13.0",
     "chai": "^6.2.2",
+    "cross-env": "^10.1.0",
     "dotenv": "^18.0.6",
     "mocha": "^12.0.2",
     "playwright": "^1.63.0"

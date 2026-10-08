@@ -1,43 +1,64 @@
 module.exports = {
+
     default: {
-        paths: ['features/**/*.feature'],
+
+        paths: [
+            'features/**/*.feature'
+        ],
+
         require: [
             'support/*.js',
             'step-definitions/*.js'
         ],
-       format: [
-    'pretty',
-    'allure-cucumberjs/reporter',
-    'json: reports/cucumber.json'
-],
-timeout : 30000,
-//tags : '@smoke or @regression',
-parallel : 4,
-publish : true,
-retry : 2,
-//dryRun : true,
-worldpParameters : {
-    environment : 'staging',
-    browser : 'chrome'
-}
+
+        format: [
+            'pretty',
+            'json:reports/cucumber.json'
+        ],
+
+        timeout: 30000,
+
+        parallel: 4,
+
+        retry: 2,
+
+        publishQuiet: true,
+
+        worldParameters: {
+            environment: process.env.ENV || 'qa',
+            browser: process.env.BROWSER || 'chromium'
+        }
     },
-    smoke : {
-        paths: ['features/**/*.feature'],
+
+    smoke: {
+
+        paths: [
+            'features/**/*.feature'
+        ],
+
         require: [
             'support/*.js',
             'step-definitions/*.js'
         ],
-       format: [
-    'pretty',
-    'allure-cucumberjs/reporter',
-    'json: reports/cucumber.json'
-],
-timeout : 30000,
-tags : '@smoke',
-parallel : 1,
-worldpParameters : {
-    environment : 'staging',
-    browser : 'chrome'
-}
+
+        format: [
+            'pretty',
+            'json:reports/cucumber.json'
+        ],
+
+        timeout: 30000,
+
+        tags: '@smoke',
+
+        parallel: 1,
+
+        retry: 1,
+
+        publishQuiet: true,
+
+        worldParameters: {
+            environment: process.env.ENV || 'qa',
+            browser: process.env.BROWSER || 'chromium'
+        }
     }
 };
